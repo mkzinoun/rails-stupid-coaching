@@ -1,0 +1,10 @@
+<p><strong>Your question:</strong> <%= @question %></p>
+<p><strong>The coach answers:</strong> </p>
+<% if @question == "I am going to work" %>
+  <p>Great!</p>
+<% elsif @question[-1] == "?" %>
+  <p>Silly question, get dressed and go to work!</p>
+<% else %>
+  <p>I don't care, get dressed and go to work!</p>
+<% end %>
+<%= link_to "Ask a new question", ask_path %>
